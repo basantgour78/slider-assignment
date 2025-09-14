@@ -11,7 +11,7 @@
   --hover-color: #f0f0f0;
   --active-color: #e6e6e6;
   --shadow-color: rgba(0, 0, 0, 0.1);
-  --transition-speed: 0.3s;
+  --transition-speed: 0;
 }
 
 .dark-theme {
@@ -27,6 +27,10 @@
   --hover-color: #2a2a2a;
   --active-color: #333333;
   --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+html.loaded {
+  --transition-speed: 0.3s;
 }
 
 * {

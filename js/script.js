@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+  document.documentElement.classList.add('loaded');
+
   // Theme toggle functionality
   const themeSwitch = document.getElementById('theme-switch');
   const themeLabel = document.querySelector('.theme-label');

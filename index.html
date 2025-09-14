@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar Assignment</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-icon">
+        <i class="fas fa-tasks"></i>
+      </div>
+      <div class="sidebar-icon" data-panel="search">
+        <i class="fas fa-search"></i>
+      </div>
+      <a class="sidebar-icon active" data-panel="dashboard">
+        <i class="fa-solid fa-gauge"></i>
+      </a>
+      <a class="sidebar-icon" data-panel="tasks">
+        <i class="fas fa-filter"></i>
+      </a>
+      <a class="sidebar-icon open" data-panel="collapse">
+        <i class="fas fa-chevron-left"></i>
+      </a>
+    </div>
+
+    <div class="sidebar-content">
+      <!-- Tasks Panel -->
+      <div class="panel" id="tasks-panel">
+        <div class="panel-header">
+          <h2>Tasks</h2>
+          <div class="panel-close">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+        </div>
+        <div class="search-container">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search...">
+        </div>
+
+        <div class="section">
+          <h3>Quick Actions</h3>
+          <a class="action-item">
+            <i class="fas fa-plus"></i>
+            <span>New task</span>
+          </a>
+          <a class="action-item">
+            <i class="fas fa-filter"></i>
+            <span>Filter tasks</span>
+          </a>
+        </div>
+
+        <div class="section">
+          <h3>My Tasks</h3>
+          <div class="menu-group">
+            <a class="menu-group-header">
+              <i class="fas fa-clock"></i>
+              <span>Due Today</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="menu-list">
+              <a class="menu-item">Review design mockups</a>
+              <a class="menu-item">Update documentation</a>
+              <a class="menu-item">Test new feature</a>
+            </div>
+          </div>
+
+          <div class="menu-group">
+            <a class="menu-group-header">
+              <i class="fas fa-spinner"></i>
+              <span>In progress</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="menu-list">
+              <a class="menu-item">Implement user auth</a>
+              <a class="menu-item">Database migration</a>
+            </div>
+          </div>
+
+          <div class="menu-group">
+            <a class="menu-group-header">
+              <i class="fas fa-check-circle"></i>
+              <span>Completed</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="menu-list">
+              <a class="menu-item">Fixed login bug</a>
+              <a class="menu-item">Updated dependencies</a>
+              <a class="menu-item">Code review completed</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Panel -->
+      <div class="panel active" id="dashboard-panel">
+        <div class="panel-header">
+          <h2>Dashboard</h2>
+          <div class="panel-close">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+        </div>
+        <div class="search-container">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search...">
+        </div>
+
+        <div class="section">
+          <h3>Dashboard Types</h3>
+
+          <div class="menu-group">
+            <a class="menu-group-header">
+              <i class="fas fa-briefcase"></i>
+              <span>Executive Summary</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="menu-list">
+              <a class="menu-item">Revenue Overview</a>
+              <a class="menu-item">Key Performance Indicators</a>
+              <a class="menu-item">Strategic Goals Progress</a>
+              <a class="menu-item">Department Highlights</a>
+            </div>
+          </div>
+
+          <div class="menu-group">
+            <a class="menu-group-header">
+              <i class="fas fa-cogs"></i>
+              <span>Operations Dashboard</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="menu-list">
+              <a class="menu-item">Project Timeline</a>
+              <a class="menu-item">Resource Allocation</a>
+              <a class="menu-item">Team Performance</a>
+              <a class="menu-item">Capacity Planning</a>
+            </div>
+          </div>
+
+          <div class="menu-group">
+            <a class="menu-group-header">
+              <i class="fas fa-chart-line"></i>
+              <span>Financial Dashboard</span>
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="menu-list">
+              <a class="menu-item">Budget vs Actual</a>
+              <a class="menu-item">Cash Flow Analysis</a>
+              <a class="menu-item">Expense Breakdown</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other panels can be added here -->
+    </div>
+  </aside>
+  <div class="container">
+    <div class="main-content">
+      <div class="theme-toggle">
+        <div>Switch to <span class="theme-label">Dark Mode</span></div>
+        <label class="switch">
+          <input type="checkbox" id="theme-switch">
+          <span class="slider round"></span>
+        </label>
+
+      </div>
+      <h1>Main Content Area</h1>
+      <p>This is where your main content would go.</p>
+    </div>
+    <footer>
+      <p>&copy; 2025 Sidebar Assignment. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

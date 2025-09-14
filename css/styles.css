@@ -264,12 +264,20 @@ body:has(.sidebar.collapsed) .container {
 }
 
 .menu-group-header.collapsed i:last-child {
-  transform: rotate(-90deg);
+  transform: rotate(-180deg);
 }
 
 .menu-list {
   padding-left: 30px;
   margin-top: 5px;
+  margin: 0;
+  max-height: 500px;
+  overflow: hidden;
+  transition: var(--transition-speed);
+}
+
+.menu-group:has(.collapsed) .menu-list {
+  max-height: 0;
 }
 
 .menu-item {

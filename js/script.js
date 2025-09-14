@@ -66,12 +66,6 @@ document.addEventListener('DOMContentLoaded', function () {
   groupHeaders.forEach(header => {
     header.addEventListener('click', function () {
       this.classList.toggle('collapsed');
-      const list = this.nextElementSibling;
-      if (this.classList.contains('collapsed')) {
-        list.style.display = 'none';
-      } else {
-        list.style.display = 'block';
-      }
     });
   });
 });
